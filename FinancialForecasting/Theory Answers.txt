@@ -1,0 +1,99 @@
+1. Explain the concept of recursion and how it can simplify certain problems.
+
+Recursion is a programming technique in which a method calls itself repeatedly to solve a problem. Instead of solving the entire problem at once, recursion breaks it into smaller subproblems of the same type. Each recursive call works on a smaller input until a base case is reached, at which point the recursion stops and the results are returned back through the previous calls.
+
+Every recursive algorithm has two essential components:
+
+Base Case: The condition that stops the recursion.
+Recursive Case: The part where the method calls itself with a smaller or simpler input.
+
+Recursion simplifies problems that naturally have a repetitive or hierarchical structure, such as:
+
+Factorial calculation
+Fibonacci sequence
+Tree traversal
+Binary search
+Divide-and-conquer algorithms
+Financial forecasting over multiple periods
+
+In financial forecasting, recursion makes it easy to calculate future values by repeatedly applying the growth rate year after year until the desired number of years is reached. This results in cleaner and more readable code compared to manually writing loops for certain recursive problems.
+
+2. Explain the recursive algorithm used for predicting future values.
+
+The recursive algorithm calculates the future value by applying the annual growth rate repeatedly until the specified number of years becomes zero.
+
+The formula used is:
+
+Future Value = Present Value × (1 + Growth Rate)
+
+The recursive method performs the following steps:
+
+If the number of years is zero, return the current value (base case).
+Otherwise, multiply the current value by (1 + growthRate).
+Reduce the number of years by one.
+Call the same method again with the updated value.
+Continue until all years have been processed.
+
+This approach naturally models year-by-year financial growth using recursive function calls.
+
+3. Discuss the time complexity of the recursive algorithm.
+
+The recursive method performs one recursive call for each year.
+
+If n represents the number of years, then:
+
+Number of recursive calls = n
+Each call performs only one multiplication and one subtraction.
+
+Therefore,
+
+Time Complexity = O(n)
+
+because the algorithm performs one operation for every year.
+
+The algorithm also uses the program's call stack to store each recursive call.
+
+Therefore,
+
+Space Complexity = O(n)
+
+because there are n recursive calls stored in memory before the recursion completes.
+
+4. Explain how to optimize the recursive solution to avoid excessive computation.
+
+Although recursion makes the program simple and easy to understand, excessive recursive calls can increase memory usage and execution time.
+
+Several optimization techniques can be used:
+
+1. Memoization
+
+Memoization stores previously computed results so they can be reused instead of recalculating them.
+
+This avoids repeated recursive computations and improves efficiency.
+
+2. Dynamic Programming
+
+Dynamic Programming solves each subproblem only once and stores the result.
+
+This technique is especially useful when recursion has overlapping subproblems.
+
+3. Iterative Approach
+
+Instead of recursion, a loop can calculate the future value year by year.
+
+Advantages:
+
+Eliminates recursive function calls.
+Uses constant memory.
+Avoids stack overflow for large inputs.
+4. Mathematical Formula
+
+For compound growth, the future value can be calculated directly using the formula:
+
+Future Value = Present Value × (1 + Growth Rate)^Years
+
+This approach provides the answer immediately without recursion or loops and is the most efficient method.
+
+Conclusion
+
+Recursion is an effective technique for solving problems that can be divided into smaller, similar subproblems. In financial forecasting, recursion can be used to calculate future values by repeatedly applying the annual growth rate. The recursive solution has a time complexity of O(n) and a space complexity of O(n). While recursion improves code readability, iterative methods, memoization, dynamic programming, or the direct mathematical formula can be used to optimize performance and reduce memory usage for large datasets.

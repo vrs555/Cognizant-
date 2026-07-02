@@ -1,0 +1,132 @@
+1. Explain Big O Notation and how it helps in analyzing algorithms.
+
+Big O notation is a mathematical notation used to describe the time complexity of an algorithm. It represents how the execution time or the number of operations performed by an algorithm increases as the size of the input increases. Big O focuses on the worst-case growth rate of an algorithm and ignores constant factors and lower-order terms.
+
+Big O notation helps developers compare different algorithms based on their efficiency. It allows programmers to estimate how well an algorithm will perform when handling large amounts of data. By analyzing time complexity, developers can select algorithms that provide better performance and reduce execution time.
+
+Some common Big O complexities are:
+
+O(1) – Constant Time: The execution time remains the same regardless of the input size.
+O(log n) – Logarithmic Time: The execution time increases slowly as the input size grows.
+O(n) – Linear Time: The execution time increases proportionally with the input size.
+O(n log n) – Linearithmic Time: Common in efficient sorting algorithms like Merge Sort and Quick Sort.
+O(n²) – Quadratic Time: The execution time increases rapidly as the input size grows, usually seen in nested loops.
+
+Using Big O notation helps software developers design efficient applications that can handle large datasets while minimizing execution time and resource usage.
+
+2. Describe the Best, Average, and Worst Case Scenarios for Search Operations.
+
+When analyzing search algorithms, three different cases are considered:
+
+Best Case
+
+The best case occurs when the required element is found immediately during the first comparison.
+
+Linear Search: The element is present at the first position of the array.
+Binary Search: The element is present at the middle position of the sorted array.
+
+Time Complexity:
+
+Linear Search: O(1)
+Binary Search: O(1)
+
+In this case, the search completes almost instantly.
+
+Average Case
+
+The average case occurs when the required element is located somewhere in the middle of the dataset.
+
+In Linear Search, approximately half of the elements are checked before finding the target.
+In Binary Search, the search space is repeatedly divided into two halves until the element is found.
+
+Time Complexity:
+
+Linear Search: O(n)
+Binary Search: O(log n)
+
+The average case represents the expected performance of the algorithm during normal execution.
+
+Worst Case
+
+The worst case occurs when the element is located at the last position or is not present in the array.
+
+Linear Search checks every element before concluding.
+Binary Search repeatedly divides the search space until no elements remain.
+
+Time Complexity:
+
+Linear Search: O(n)
+Binary Search: O(log n)
+
+The worst case indicates the maximum amount of time an algorithm may require.
+
+3. Compare the Time Complexity of Linear Search and Binary Search.
+Linear Search
+
+Linear Search checks each element one by one until the required element is found or the end of the array is reached.
+
+Time Complexities:
+
+Best Case: O(1)
+Average Case: O(n)
+Worst Case: O(n)
+
+Advantages:
+
+Simple to implement.
+Works on both sorted and unsorted arrays.
+Suitable for small datasets.
+
+Disadvantages:
+
+Slow for large datasets.
+Performance decreases as the number of elements increases.
+Binary Search
+
+Binary Search works only on sorted arrays. It repeatedly divides the search space into two halves until the required element is found.
+
+Time Complexities:
+
+Best Case: O(1)
+Average Case: O(log n)
+Worst Case: O(log n)
+
+Advantages:
+
+Much faster than Linear Search for large datasets.
+Efficient for searching in sorted collections.
+Requires fewer comparisons.
+
+Disadvantages:
+
+Requires the array to be sorted.
+Sorting may introduce additional overhead if data changes frequently.
+Time Complexity Comparison Table
+Search Algorithm	Best Case	Average Case	Worst Case
+Linear Search	O(1)	O(n)	O(n)
+Binary Search	O(1)	O(log n)	O(log n)
+4. Which Search Algorithm is More Suitable for an E-commerce Platform and Why?
+
+For an e-commerce platform, Binary Search is more suitable than Linear Search because online shopping websites usually contain thousands or even millions of products. Searching through such a large collection using Linear Search would require checking many products one by one, resulting in slower performance.
+
+Binary Search significantly reduces the number of comparisons by dividing the search space into two equal halves after each comparison. This results in a time complexity of O(log n), making it much faster and more efficient for large datasets.
+
+However, Binary Search requires the product data to be sorted based on a search key such as Product ID or Product Name. Once the products are sorted, Binary Search provides quick and efficient retrieval of information.
+
+Linear Search is useful only when:
+
+The dataset is very small.
+The data is unsorted.
+Searching is performed infrequently.
+
+Binary Search is preferred when:
+
+The dataset is large.
+The data is already sorted.
+Fast search performance is required.
+
+Since e-commerce applications prioritize speed and user experience, Binary Search is the preferred algorithm because it provides faster search results and improves overall application performance.
+
+Conclusion
+
+Both Linear Search and Binary Search are useful searching algorithms, but they are suitable for different situations. Linear Search is easy to implement and works with unsorted data, whereas Binary Search offers much better performance for large sorted datasets. For an e-commerce platform with a large product database, Binary Search is the ideal choice because of its efficient O(log n) time complexity, leading to faster searches and a better user experience.
