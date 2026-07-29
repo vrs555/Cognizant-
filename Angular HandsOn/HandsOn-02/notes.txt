@@ -1,0 +1,12 @@
+angular.json — workspace-wide build/serve/test configuration (builders, options, budgets).
+tsconfig.json — base TypeScript compiler options shared by the whole workspace.
+tsconfig.app.json — TypeScript compiler options specific to the browser application build.
+package.json — project metadata and npm dependency/script definitions.
+src/main.ts — application entry point; bootstraps the root standalone component.
+src/app/app.config.ts — root application configuration (providers: router, change detection, etc.).
+src/app/app.ts — root standalone component that hosts the router outlet.
+src/index.html — the single HTML page the SPA is rendered into.
+
+angular.json budgets (architect > build > configurations > production):
+maximumWarning: 500kB — build shows a warning once the initial bundle exceeds this size.
+maximumError: 1MB — build fails once the initial bundle exceeds this size.
