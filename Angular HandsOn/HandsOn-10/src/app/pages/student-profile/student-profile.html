@@ -1,0 +1,7 @@
+<h2>My Enrolled Courses</h2>
+<ul>
+  <li *ngFor="let course of enrolledCourses">{{ course.name }} ({{ course.code }})</li>
+</ul>
+<p *ngIf="!enrolledCourses.length">You are not enrolled in any courses yet.</p>
+
+<app-notification></app-notification>
